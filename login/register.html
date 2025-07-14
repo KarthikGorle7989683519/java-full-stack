@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/registerstyle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="auth-container">
+      <div class="amazon-logo">
+        <span class="logo-text">WELLCOME</span>
+        <span class="logo-dot">.</span>
+      </div>
+      
+      <h2>Create account</h2>
+      
+      <form id="registerForm">
+        <label class="input-label" for="newUsername">Your name</label>
+        <input type="text" class="form-control" id="newUsername" placeholder="First and last name" required>
+        
+        <label class="input-label" for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="example@example.com" required>
+        
+        <label class="input-label" for="phone">Mobile number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="10-digit mobile number" required>
+        
+        <label class="input-label" for="newPassword">Password</label>
+        <input type="password" class="form-control" id="newPassword" placeholder="At least 6 characters" required>
+        <div class="password-requirements">
+          <i class="bi bi-info-circle"></i> Passwords must be at least 6 characters.
+        </div>
+        
+        <button type="submit" class="btn btn-amazon">
+          Continue
+        </button>
+        
+        <div class="terms-notice">
+          By creating an account, you agree to Amazon's <a href="#" style="color: var(--amazon-blue);">Conditions of Use</a> and <a href="#" style="color: var(--amazon-blue);">Privacy Notice</a>.
+        </div>
+        
+        <div class="divider">
+          <span class="divider-text">Already have an account?</span>
+        </div>
+        
+        <div class="login-redirect">
+          <a href="index.html"><i class="bi bi-arrow-right"></i> Sign in</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Your custom script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

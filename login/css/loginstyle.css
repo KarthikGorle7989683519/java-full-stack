@@ -1,0 +1,125 @@
+/* Login Page Styles */
+body {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    background-color: white;
+    color: #0F1111;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #131921;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.google-btn {
+    background-color: #DB4437;
+}
+
+.facebook-btn {
+    background-color: #4267B2;
+}
+
+.twitter-btn {
+    background-color: #1DA1F2;
+}
+
+.divider {
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    color: #767676;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #ddd;
+    z-index: -1;
+}
+
+.divider span {
+    background-color: white;
+    padding: 0 10px;
+}
+
+.input-group-text {
+    background-color: #f3f3f3;
+    border: 1px solid #a6a6a6;
+    border-right: none;
+}
+
+.input-with-icon {
+    border-left: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #a6a6a6;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: #FFD814;
+    border-color: #FCD200;
+    color: #0F1111;
+    font-weight: 500;
+}
+
+.btn-login:hover {
+    background-color: #F7CA00;
+    border-color: #F2C200;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+    color: #C7511F;
+}

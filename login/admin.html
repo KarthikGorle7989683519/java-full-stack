@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/adminstyle.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <h2>Admin Dashboard</h2>
+      <button class="logout-btn" onclick="logout()">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </button>
+    </div>
+    <nav class="tab-nav">
+      <button class="tab-btn active" onclick="showTab('products')">
+        <i class="bi bi-box-seam"></i> Products
+      </button>
+      <button class="tab-btn" onclick="showTab('orders')">
+        <i class="bi bi-cart-check"></i> Orders
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="notification" class="notification"></div>
+
+    <!-- Products Tab -->
+    <!-- In admin.html, update the form section -->
+  <section id="productsTab" class="tab-content">
+      <div class="admin-form-container">
+        <h3 id="formTitle">Add New Product</h3>
+        <form id="addForm">
+          <input type="text" id="name" placeholder="Product Name" required />
+          <input type="text" id="imageUrl" placeholder="Image URL" required />
+          <input type="text" id="description" placeholder="Description" required />
+          <input type="number" id="cost" placeholder="Cost" required step="0.01" />
+          <input type="number" id="rating" placeholder="Rating (1-5)" required min="1" max="5" step="0.1" />
+          <input type="number" id="quantity" placeholder="Quantity" required min="0" />
+          <button type="submit" id="submitBtn">
+            <i class="bi bi-plus-circle"></i> Add Product
+          </button>
+        </form>
+      </div>
+      
+      <div class="search-container">
+        <input type="text" id="productSearch" placeholder="Search products..." oninput="searchProducts()">
+        <button onclick="loadProducts()">
+          <i class="bi bi-arrow-clockwise"></i> Refresh
+        </button>
+      </div>
+      
+      <div id="productList" class="product-grid">
+        <!-- Products will be loaded here as cards -->
+      </div>
+    </section>
+
+    <!-- Orders Tab -->
+    <section id="ordersTab" class="tab-content" style="display:none;">
+      <div class="search-container">
+        <input type="text" id="orderSearch" placeholder="Search orders..." oninput="searchOrders()">
+        <button onclick="loadOrders()">
+          <i class="bi bi-arrow-clockwise"></i> Refresh
+        </button>
+      </div>
+      
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Date</th>
+              <th>Customer</th>
+              <th>Items</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Shipping</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="ordersContainer">
+            <!-- Orders will be loaded here as table rows -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
