@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/checkoutstyle.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <a href="cart.html" class="back-link">← Back to Cart</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <h2>Checkout</h2>
+  </header>
+
+  <main>
+    <div class="checkout-container">
+      <div class="checkout-summary">
+        <h3>Order Summary</h3>
+        <div id="orderSummary"></div>
+      </div>
+      
+      <div class="checkout-form">
+        <h3>Shipping Information</h3>
+        <form id="shippingForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="address">Street Address</label>
+            <textarea id="address" rows="3" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="state">State/Province</label>
+            <input type="text" id="state" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="zipCode">ZIP/Postal Code</label>
+            <input type="text" id="zipCode" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" required>
+              <option value="">Select Country</option>
+              <option value="US">United States</option>
+              <option value="IN">India</option>
+              <option value="UK">United Kingdom</option>
+              <option value="CA">Canada</option>
+              <option value="AU">Australia</option>
+              <option value="DE">Germany</option>
+              <option value="FR">France</option>
+              <option value="JP">Japan</option>
+              <option value="BR">Brazil</option>
+              <option value="SG">Singapore</option>
+            </select>
+          </div>
+
+          <h3>Payment Method</h3>
+          <div class="payment-methods">
+            <div class="payment-option">
+              <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+              <label for="creditCard">Credit/Debit Card</label>
+              <div class="payment-details" id="creditCardDetails">
+                <div class="form-group">
+                  <label for="cardNumber">Card Number</label>
+                  <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-group">
+                  <label for="cardName">Name on Card</label>
+                  <input type="text" id="cardName">
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="expiryDate">Expiry Date</label>
+                    <input type="text" id="expiryDate" placeholder="MM/YY">
+                  </div>
+                  <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="123">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-option">
+              <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+              <label for="paypal">PayPal</label>
+              <div class="payment-details" id="paypalDetails" style="display: none;">
+                <p>You will be redirected to PayPal to complete your payment</p>
+              </div>
+            </div>
+
+            <div class="payment-option">
+              <input type="radio" id="cod" name="paymentMethod" value="cod">
+              <label for="cod">Cash on Delivery</label>
+              <div class="payment-details" id="codDetails" style="display: none;">
+                <p>Pay with cash when your order is delivered</p>
+              </div>
+            </div>
+          </div>
+          
+          <button type="submit" class="checkout-btn">Place Order</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  
+  <script src="js/script.js"></script>
+
+</body>
+</html>

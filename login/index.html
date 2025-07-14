@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/loginstyle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="auth-container">
+      <h2>Welcome Back</h2>
+      
+      <!-- Social Login Options -->
+      <div class="social-login">
+        <a href="#" class="social-btn google-btn">
+          <i class="bi bi-google"></i>
+        </a>
+        <a href="#" class="social-btn facebook-btn">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="social-btn twitter-btn">
+          <i class="bi bi-twitter"></i>
+        </a>
+      </div>
+      
+      <div class="divider">or</div>
+      
+      <!-- Login Form -->
+      <form id="loginForm">
+        <div class="mb-3">
+    <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+        <input type="text" class="form-control input-with-icon" id="loginId" 
+               placeholder="Username, Email or Phone" required>
+    </div>
+</div>
+        
+        <div class="mb-3">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+            <input type="password" class="form-control input-with-icon" id="password" placeholder="Password" required>
+          </div>
+        </div>
+        
+        <div class="d-flex justify-content-between mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Remember me</label>
+          </div>
+          <a href="#" class="text-decoration-none">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-login">
+          <i class="bi bi-box-arrow-in-right"></i> Login
+        </button>
+      </form>
+      
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Your custom script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

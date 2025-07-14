@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #0F1111;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #131921;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Search Bar Styles */
+#searchInput {
+    border: none;
+    border-radius: 4px 0 0 4px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.btn-warning {
+    background-color: #febd69;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: #0F1111;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.btn-warning:hover {
+    background-color: #f3a847;
+}
+
+/* Cart Icon Styles */
+#cartLink {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+#cartCount {
+    font-size: 12px;
+}
+
+/* Product Cards */
+#productCards {
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: white;
+}
+
+.card-body {
+    padding: 15px;
+    background-color: white;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card-text {
+    color: #B12704;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.rating {
+    color: #FFA41C;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #FFD814;
+    border-color: #FCD200;
+    color: #0F1111;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #F7CA00;
+    border-color: #F2C200;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #searchInput {
+        width: 100%;
+    }
+}
